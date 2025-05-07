@@ -6,6 +6,7 @@ class DAO():
 
     @staticmethod
     def getAllNodes(year):
+        """Restituisce tutti i paesi presenti nell'anno indicato"""
         conn=DBConnect.get_connection()
         cursor=conn.cursor(dictionary=True)
 
@@ -26,6 +27,7 @@ class DAO():
 
     @staticmethod
     def getEdges(year, idMap):
+        """Restituisce tutti gli archi tra i paesi presenti nell'anno indicato"""
         conn=DBConnect.get_connection()
         cursor=conn.cursor(dictionary=True)
 
